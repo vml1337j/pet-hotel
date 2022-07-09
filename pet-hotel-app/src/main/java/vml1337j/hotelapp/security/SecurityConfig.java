@@ -1,6 +1,5 @@
 package vml1337j.hotelapp.security;
 
-
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -30,8 +29,7 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((authz) -> authz
-                        // todo change endpoint
-                        .antMatchers("/api/v1/owner/**").permitAll()
+                        .antMatchers("/pets/**").authenticated()
                 )
                 .csrf().disable()
                 .formLogin().disable()
