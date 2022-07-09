@@ -1,0 +1,6 @@
+rootProject.name = 'pet-hotel'
+
+includeBuild 'pet-service'
+includeBuild 'pet-hotel-app'
+includeBuild 'register-service'
+includeBuild 'validation-service'
