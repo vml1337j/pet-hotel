@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driverClassName: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+
+api:
+  pet-service: "http://${PET_SERVICE}/api/v1/pet-service"
+  registration-service: "http://${REGISTRATION_SERVICE}/api/v1/registration"
+  validation-service: "http://${VALIDATION_SERVICE}/api/v1/validation"
