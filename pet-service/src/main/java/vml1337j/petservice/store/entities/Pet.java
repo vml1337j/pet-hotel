@@ -18,8 +18,7 @@ public class Pet {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Enumerated(value = EnumType.STRING)
-    private Species type;
+    private String type;
 
     private LocalDate birthday;
 
@@ -31,11 +30,4 @@ public class Pet {
     @ManyToOne
     @JoinColumn(name = "owner_id")
     private Owner owner;
-
-    public enum Species {
-        CAT,
-        DOG,
-        MONKEY,
-        COW
-    }
 }
