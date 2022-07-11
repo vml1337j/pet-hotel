@@ -39,7 +39,7 @@ services:
       - 'DB_URL=jdbc:postgresql://postgres:5432/pet_db'
 
   registration-service:
-    build: registration-service
+    build: ./registration-service
     container_name: 'registration-service'
     restart: always
     depends_on:
